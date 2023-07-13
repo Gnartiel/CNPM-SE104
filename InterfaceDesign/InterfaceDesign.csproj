@@ -33,7 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Microsoft Office\root\vfs\ProgramFilesX86\Microsoft Office\Office16\DCF\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class_ThongTinNguoiDung.cs" />
     <Compile Include="form_baocaodoanhthu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +77,12 @@
     <Compile Include="form_donvicachdung.Designer.cs">
       <DependentUpon>form_donvicachdung.cs</DependentUpon>
     </Compile>
+    <Compile Include="form_hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_hoadon.Designer.cs">
+      <DependentUpon>form_hoadon.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_ketxuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +106,12 @@
     </Compile>
     <Compile Include="form_phieukhambenh.Designer.cs">
       <DependentUpon>form_phieukhambenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_taikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_taikhoan.Designer.cs">
+      <DependentUpon>form_taikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="form_thuoc.cs">
       <SubType>Form</SubType>
@@ -135,6 +154,9 @@
     <EmbeddedResource Include="form_benhnhan.resx">
       <DependentUpon>form_benhnhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form_benhnhan.vi.resx">
+      <DependentUpon>form_benhnhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_caidat.resx">
       <DependentUpon>form_caidat.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_donvicachdung.resx">
       <DependentUpon>form_donvicachdung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_hoadon.resx">
+      <DependentUpon>form_hoadon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_ketxuat.resx">
       <DependentUpon>form_ketxuat.cs</DependentUpon>
@@ -158,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_phieunhapthuoc.resx">
       <DependentUpon>form_phieunhapthuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_taikhoan.resx">
+      <DependentUpon>form_taikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_thuoc.resx">
       <DependentUpon>form_thuoc.cs</DependentUpon>
@@ -188,11 +216,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\home.png" />
+    <None Include="Resources\BackGround.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.jpg" />
+    <None Include="Resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

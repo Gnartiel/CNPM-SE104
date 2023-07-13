@@ -29,6 +29,7 @@ namespace InterfaceDesign
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_danhsach));
             this.btn_BenhNhan = new System.Windows.Forms.Button();
             this.btn_PhieuKhamBenh = new System.Windows.Forms.Button();
             this.btn_Thuoc = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@ namespace InterfaceDesign
             this.btn_DonViCachDung = new System.Windows.Forms.Button();
             this.btn_TrangChur_ManHinhPhu = new System.Windows.Forms.Button();
             this.btn_TroVe_ManHinhPhu = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_BenhNhan
@@ -126,7 +128,7 @@ namespace InterfaceDesign
             // btn_TrangChur_ManHinhPhu
             // 
             this.btn_TrangChur_ManHinhPhu.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_TrangChur_ManHinhPhu.BackgroundImage = global::InterfaceDesign.Properties.Resources.home;
+            this.btn_TrangChur_ManHinhPhu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_TrangChur_ManHinhPhu.BackgroundImage")));
             this.btn_TrangChur_ManHinhPhu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_TrangChur_ManHinhPhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TrangChur_ManHinhPhu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -141,24 +143,41 @@ namespace InterfaceDesign
             // btn_TroVe_ManHinhPhu
             // 
             this.btn_TroVe_ManHinhPhu.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_TroVe_ManHinhPhu.BackgroundImage = global::InterfaceDesign.Properties.Resources.back;
+            this.btn_TroVe_ManHinhPhu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_TroVe_ManHinhPhu.BackgroundImage")));
             this.btn_TroVe_ManHinhPhu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_TroVe_ManHinhPhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TroVe_ManHinhPhu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_TroVe_ManHinhPhu.Location = new System.Drawing.Point(27, 81);
+            this.btn_TroVe_ManHinhPhu.Location = new System.Drawing.Point(24, 91);
             this.btn_TroVe_ManHinhPhu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TroVe_ManHinhPhu.Name = "btn_TroVe_ManHinhPhu";
-            this.btn_TroVe_ManHinhPhu.Size = new System.Drawing.Size(47, 43);
+            this.btn_TroVe_ManHinhPhu.Size = new System.Drawing.Size(52, 48);
             this.btn_TroVe_ManHinhPhu.TabIndex = 7;
             this.btn_TroVe_ManHinhPhu.UseVisualStyleBackColor = false;
             this.btn_TroVe_ManHinhPhu.Click += new System.EventHandler(this.btn_TroVe_ManHinhPhu_Click);
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.White;
+            this.btn_Thoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Thoat.BackgroundImage")));
+            this.btn_Thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Thoat.Location = new System.Drawing.Point(24, 157);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(52, 48);
+            this.btn_Thoat.TabIndex = 95;
+            this.btn_Thoat.Text = " ";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // form_danhsach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1338, 716);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_TroVe_ManHinhPhu);
             this.Controls.Add(this.btn_TrangChur_ManHinhPhu);
             this.Controls.Add(this.btn_DonViCachDung);
@@ -167,6 +186,7 @@ namespace InterfaceDesign
             this.Controls.Add(this.btn_Thuoc);
             this.Controls.Add(this.btn_PhieuKhamBenh);
             this.Controls.Add(this.btn_BenhNhan);
+            this.DoubleBuffered = true;
             this.Name = "form_danhsach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách ";
@@ -185,5 +205,6 @@ namespace InterfaceDesign
         private System.Windows.Forms.Button btn_DonViCachDung;
         private System.Windows.Forms.Button btn_TrangChur_ManHinhPhu;
         private System.Windows.Forms.Button btn_TroVe_ManHinhPhu;
+        private System.Windows.Forms.Button btn_Thoat;
     }
 }

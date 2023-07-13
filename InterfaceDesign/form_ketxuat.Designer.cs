@@ -33,6 +33,7 @@ namespace InterfaceDesign
             this.btn_TroVe_KetXuat = new System.Windows.Forms.Button();
             this.btn_TrangChu_KetXuat = new System.Windows.Forms.Button();
             this.btn_BCDT = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_BCSDT
@@ -57,7 +58,7 @@ namespace InterfaceDesign
             this.btn_TroVe_KetXuat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_TroVe_KetXuat.Location = new System.Drawing.Point(18, 67);
             this.btn_TroVe_KetXuat.Name = "btn_TroVe_KetXuat";
-            this.btn_TroVe_KetXuat.Size = new System.Drawing.Size(35, 35);
+            this.btn_TroVe_KetXuat.Size = new System.Drawing.Size(52, 48);
             this.btn_TroVe_KetXuat.TabIndex = 27;
             this.btn_TroVe_KetXuat.UseVisualStyleBackColor = true;
             this.btn_TroVe_KetXuat.Click += new System.EventHandler(this.btn_TroVe_KetXuat_Click);
@@ -71,7 +72,7 @@ namespace InterfaceDesign
             this.btn_TrangChu_KetXuat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_TrangChu_KetXuat.Location = new System.Drawing.Point(18, 12);
             this.btn_TrangChu_KetXuat.Name = "btn_TrangChu_KetXuat";
-            this.btn_TrangChu_KetXuat.Size = new System.Drawing.Size(39, 39);
+            this.btn_TrangChu_KetXuat.Size = new System.Drawing.Size(52, 48);
             this.btn_TrangChu_KetXuat.TabIndex = 26;
             this.btn_TrangChu_KetXuat.UseVisualStyleBackColor = true;
             this.btn_TrangChu_KetXuat.Click += new System.EventHandler(this.btn_TrangChu_KetXuat_Click);
@@ -91,20 +92,37 @@ namespace InterfaceDesign
             this.btn_BCDT.UseVisualStyleBackColor = false;
             this.btn_BCDT.Click += new System.EventHandler(this.btn_BCDT_Click);
             // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.White;
+            this.btn_Thoat.BackgroundImage = global::InterfaceDesign.Properties.Resources.thoat;
+            this.btn_Thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Thoat.Location = new System.Drawing.Point(18, 121);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(52, 48);
+            this.btn_Thoat.TabIndex = 96;
+            this.btn_Thoat.Text = " ";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
             // form_ketxuat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1338, 716);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_TroVe_KetXuat);
             this.Controls.Add(this.btn_TrangChu_KetXuat);
             this.Controls.Add(this.btn_BCSDT);
             this.Controls.Add(this.btn_BCDT);
+            this.DoubleBuffered = true;
             this.Name = "form_ketxuat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kết Xuất";
-            this.Load += new System.EventHandler(this.form_ketxuat_Load_1);
             this.ResumeLayout(false);
 
         }
@@ -115,5 +133,6 @@ namespace InterfaceDesign
         private System.Windows.Forms.Button btn_BCSDT;
         private System.Windows.Forms.Button btn_TroVe_KetXuat;
         private System.Windows.Forms.Button btn_TrangChu_KetXuat;
+        private System.Windows.Forms.Button btn_Thoat;
     }
 }

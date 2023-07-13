@@ -40,22 +40,18 @@ namespace InterfaceDesign
             this.cl_ThangBCDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl_NamBCDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl_TongDoanhThu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtb_NamCTBC = new System.Windows.Forms.TextBox();
-            this.txtb_ThangCTBC = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
-            this.btn_KetXuat_CTBC = new System.Windows.Forms.Button();
-            this.lb_NamCTBC = new System.Windows.Forms.Label();
-            this.lb_ThangCTBC = new System.Windows.Forms.Label();
             this.lb_CTBCDoanhThu = new System.Windows.Forms.Label();
             this.lb_BCDoanhThu = new System.Windows.Forms.Label();
             this.btn_TrangChu_BCDT = new System.Windows.Forms.Button();
             this.btn_TroVe_BCDT = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_KetXuat_BCDT = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Xuat_BCDT = new System.Windows.Forms.Button();
             this.btn_Xuat_CTBCDT = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.cbx_Nam = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lv_CTBCDoanhThu
@@ -68,15 +64,15 @@ namespace InterfaceDesign
             this.cl_SoBenhNhan,
             this.cl_TyLe});
             this.lv_CTBCDoanhThu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_CTBCDoanhThu.FullRowSelect = true;
             this.lv_CTBCDoanhThu.GridLines = true;
             this.lv_CTBCDoanhThu.HideSelection = false;
-            this.lv_CTBCDoanhThu.Location = new System.Drawing.Point(677, 259);
+            this.lv_CTBCDoanhThu.Location = new System.Drawing.Point(677, 135);
             this.lv_CTBCDoanhThu.Name = "lv_CTBCDoanhThu";
-            this.lv_CTBCDoanhThu.Size = new System.Drawing.Size(604, 431);
+            this.lv_CTBCDoanhThu.Size = new System.Drawing.Size(604, 555);
             this.lv_CTBCDoanhThu.TabIndex = 38;
             this.lv_CTBCDoanhThu.UseCompatibleStateImageBehavior = false;
             this.lv_CTBCDoanhThu.View = System.Windows.Forms.View.Details;
-            this.lv_CTBCDoanhThu.VirtualMode = true;
             // 
             // cl_NgayCTDT
             // 
@@ -120,6 +116,7 @@ namespace InterfaceDesign
             this.cl_NamBCDT,
             this.cl_TongDoanhThu});
             this.lv_BCDoanhThu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_BCDoanhThu.FullRowSelect = true;
             this.lv_BCDoanhThu.GridLines = true;
             this.lv_BCDoanhThu.HideSelection = false;
             this.lv_BCDoanhThu.Location = new System.Drawing.Point(95, 259);
@@ -128,7 +125,7 @@ namespace InterfaceDesign
             this.lv_BCDoanhThu.TabIndex = 37;
             this.lv_BCDoanhThu.UseCompatibleStateImageBehavior = false;
             this.lv_BCDoanhThu.View = System.Windows.Forms.View.Details;
-            this.lv_BCDoanhThu.VirtualMode = true;
+            this.lv_BCDoanhThu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lv_BCDoanhThu_MouseClick);
             // 
             // cl_ThangBCDT
             // 
@@ -146,27 +143,6 @@ namespace InterfaceDesign
             this.cl_TongDoanhThu.Text = "Tổng Doanh Thu";
             this.cl_TongDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cl_TongDoanhThu.Width = 292;
-            // 
-            // txtb_NamCTBC
-            // 
-            this.txtb_NamCTBC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_NamCTBC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_NamCTBC.Location = new System.Drawing.Point(838, 156);
-            this.txtb_NamCTBC.Multiline = true;
-            this.txtb_NamCTBC.Name = "txtb_NamCTBC";
-            this.txtb_NamCTBC.Size = new System.Drawing.Size(104, 34);
-            this.txtb_NamCTBC.TabIndex = 30;
-            this.txtb_NamCTBC.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
-            // 
-            // txtb_ThangCTBC
-            // 
-            this.txtb_ThangCTBC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_ThangCTBC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_ThangCTBC.Location = new System.Drawing.Point(838, 92);
-            this.txtb_ThangCTBC.Multiline = true;
-            this.txtb_ThangCTBC.Name = "txtb_ThangCTBC";
-            this.txtb_ThangCTBC.Size = new System.Drawing.Size(104, 34);
-            this.txtb_ThangCTBC.TabIndex = 28;
             // 
             // textBox20
             // 
@@ -188,42 +164,6 @@ namespace InterfaceDesign
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(639, 678);
             this.textBox21.TabIndex = 40;
-            // 
-            // btn_KetXuat_CTBC
-            // 
-            this.btn_KetXuat_CTBC.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_KetXuat_CTBC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KetXuat_CTBC.Location = new System.Drawing.Point(1053, 79);
-            this.btn_KetXuat_CTBC.Name = "btn_KetXuat_CTBC";
-            this.btn_KetXuat_CTBC.Size = new System.Drawing.Size(130, 45);
-            this.btn_KetXuat_CTBC.TabIndex = 36;
-            this.btn_KetXuat_CTBC.Text = "Kết Xuất";
-            this.btn_KetXuat_CTBC.UseVisualStyleBackColor = false;
-            // 
-            // lb_NamCTBC
-            // 
-            this.lb_NamCTBC.AutoSize = true;
-            this.lb_NamCTBC.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lb_NamCTBC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NamCTBC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_NamCTBC.Location = new System.Drawing.Point(754, 156);
-            this.lb_NamCTBC.Name = "lb_NamCTBC";
-            this.lb_NamCTBC.Size = new System.Drawing.Size(64, 27);
-            this.lb_NamCTBC.TabIndex = 29;
-            this.lb_NamCTBC.Text = "Năm:";
-            this.lb_NamCTBC.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lb_ThangCTBC
-            // 
-            this.lb_ThangCTBC.AutoSize = true;
-            this.lb_ThangCTBC.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lb_ThangCTBC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ThangCTBC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_ThangCTBC.Location = new System.Drawing.Point(754, 94);
-            this.lb_ThangCTBC.Name = "lb_ThangCTBC";
-            this.lb_ThangCTBC.Size = new System.Drawing.Size(78, 27);
-            this.lb_ThangCTBC.TabIndex = 27;
-            this.lb_ThangCTBC.Text = "Tháng:";
             // 
             // lb_CTBCDoanhThu
             // 
@@ -258,7 +198,7 @@ namespace InterfaceDesign
             this.btn_TrangChu_BCDT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_TrangChu_BCDT.Location = new System.Drawing.Point(18, 12);
             this.btn_TrangChu_BCDT.Name = "btn_TrangChu_BCDT";
-            this.btn_TrangChu_BCDT.Size = new System.Drawing.Size(39, 39);
+            this.btn_TrangChu_BCDT.Size = new System.Drawing.Size(52, 48);
             this.btn_TrangChu_BCDT.TabIndex = 41;
             this.btn_TrangChu_BCDT.UseVisualStyleBackColor = true;
             this.btn_TrangChu_BCDT.Click += new System.EventHandler(this.btn_TrangChu_BCDT_Click);
@@ -270,22 +210,12 @@ namespace InterfaceDesign
             this.btn_TroVe_BCDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TroVe_BCDT.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TroVe_BCDT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_TroVe_BCDT.Location = new System.Drawing.Point(18, 60);
+            this.btn_TroVe_BCDT.Location = new System.Drawing.Point(18, 73);
             this.btn_TroVe_BCDT.Name = "btn_TroVe_BCDT";
-            this.btn_TroVe_BCDT.Size = new System.Drawing.Size(35, 35);
+            this.btn_TroVe_BCDT.Size = new System.Drawing.Size(52, 48);
             this.btn_TroVe_BCDT.TabIndex = 42;
             this.btn_TroVe_BCDT.UseVisualStyleBackColor = true;
             this.btn_TroVe_BCDT.Click += new System.EventHandler(this.btn_TroVe_BCDT_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(200, 126);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(104, 34);
-            this.textBox1.TabIndex = 44;
             // 
             // btn_KetXuat_BCDT
             // 
@@ -297,6 +227,7 @@ namespace InterfaceDesign
             this.btn_KetXuat_BCDT.TabIndex = 45;
             this.btn_KetXuat_BCDT.Text = "Kết Xuất";
             this.btn_KetXuat_BCDT.UseVisualStyleBackColor = false;
+            this.btn_KetXuat_BCDT.Click += new System.EventHandler(this.btn_KetXuat_BCDT_Click);
             // 
             // label1
             // 
@@ -320,41 +251,65 @@ namespace InterfaceDesign
             this.btn_Xuat_BCDT.TabIndex = 46;
             this.btn_Xuat_BCDT.Text = "Xuất File";
             this.btn_Xuat_BCDT.UseVisualStyleBackColor = false;
+            this.btn_Xuat_BCDT.Click += new System.EventHandler(this.btn_Xuat_BCDT_Click);
             // 
             // btn_Xuat_CTBCDT
             // 
             this.btn_Xuat_CTBCDT.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Xuat_CTBCDT.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xuat_CTBCDT.Location = new System.Drawing.Point(1053, 161);
+            this.btn_Xuat_CTBCDT.Location = new System.Drawing.Point(933, 79);
             this.btn_Xuat_CTBCDT.Name = "btn_Xuat_CTBCDT";
             this.btn_Xuat_CTBCDT.Size = new System.Drawing.Size(130, 45);
             this.btn_Xuat_CTBCDT.TabIndex = 47;
             this.btn_Xuat_CTBCDT.Text = "Xuất File";
             this.btn_Xuat_CTBCDT.UseVisualStyleBackColor = false;
+            this.btn_Xuat_CTBCDT.Click += new System.EventHandler(this.btn_Xuat_CTBCDT_Click);
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.White;
+            this.btn_Thoat.BackgroundImage = global::InterfaceDesign.Properties.Resources.thoat;
+            this.btn_Thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Thoat.Location = new System.Drawing.Point(18, 135);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(52, 48);
+            this.btn_Thoat.TabIndex = 94;
+            this.btn_Thoat.Text = " ";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // cbx_Nam
+            // 
+            this.cbx_Nam.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_Nam.FormattingEnabled = true;
+            this.cbx_Nam.Location = new System.Drawing.Point(198, 124);
+            this.cbx_Nam.Name = "cbx_Nam";
+            this.cbx_Nam.Size = new System.Drawing.Size(121, 34);
+            this.cbx_Nam.TabIndex = 95;
             // 
             // form_baocaodoanhthu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1338, 716);
             this.ControlBox = false;
+            this.Controls.Add(this.cbx_Nam);
+            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Xuat_CTBCDT);
             this.Controls.Add(this.btn_Xuat_BCDT);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_KetXuat_BCDT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_TroVe_BCDT);
             this.Controls.Add(this.btn_TrangChu_BCDT);
             this.Controls.Add(this.lv_CTBCDoanhThu);
             this.Controls.Add(this.lv_BCDoanhThu);
-            this.Controls.Add(this.txtb_NamCTBC);
-            this.Controls.Add(this.txtb_ThangCTBC);
-            this.Controls.Add(this.btn_KetXuat_CTBC);
-            this.Controls.Add(this.lb_NamCTBC);
-            this.Controls.Add(this.lb_ThangCTBC);
             this.Controls.Add(this.lb_CTBCDoanhThu);
             this.Controls.Add(this.lb_BCDoanhThu);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.textBox21);
+            this.DoubleBuffered = true;
             this.Name = "form_baocaodoanhthu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaoCaoDoanhThu";
@@ -377,21 +332,17 @@ namespace InterfaceDesign
         private System.Windows.Forms.ColumnHeader cl_ThangBCDT;
         private System.Windows.Forms.ColumnHeader cl_NamBCDT;
         private System.Windows.Forms.ColumnHeader cl_TongDoanhThu;
-        private System.Windows.Forms.TextBox txtb_NamCTBC;
-        private System.Windows.Forms.TextBox txtb_ThangCTBC;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Button btn_KetXuat_CTBC;
-        private System.Windows.Forms.Label lb_NamCTBC;
-        private System.Windows.Forms.Label lb_ThangCTBC;
         private System.Windows.Forms.Label lb_CTBCDoanhThu;
         private System.Windows.Forms.Label lb_BCDoanhThu;
         private System.Windows.Forms.Button btn_TrangChu_BCDT;
         private System.Windows.Forms.Button btn_TroVe_BCDT;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_KetXuat_BCDT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Xuat_BCDT;
         private System.Windows.Forms.Button btn_Xuat_CTBCDT;
+        private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.ComboBox cbx_Nam;
     }
 }

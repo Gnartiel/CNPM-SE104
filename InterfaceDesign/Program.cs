@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
 namespace InterfaceDesign
 {
     static class Program
@@ -17,7 +20,8 @@ namespace InterfaceDesign
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new form_manhinhchinh());
+            //Application.Run(new form_manhinhchinh());
+            Application.Run(new form_taikhoan());
             //application.run(new form_danhsach());
             //application.run(new form_tracuu());
             //application.run(new form_ketxuat());
@@ -31,7 +35,7 @@ namespace InterfaceDesign
             //application.run(new form_phieukhambenh());
 
             //application.run(new form_baocaodoanhthu());
-            //application.run(new form_baocaosudungthuoc());*
+            //application.run(new form_baocaosudungthuoc());
         }
     }
 }

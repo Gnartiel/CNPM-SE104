@@ -38,16 +38,18 @@ namespace InterfaceDesign
             this.Hide();
         }
 
-        private void form_ketxuat_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_BCSDT_Click(object sender, EventArgs e)
         {
             Form frm = new form_baocaosudungthuoc();
             frm.Show();
             this.Hide();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            DialogResult dg = MessageBox.Show("Bạn có muốn thoát ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dg == DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

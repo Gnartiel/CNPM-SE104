@@ -34,6 +34,9 @@ namespace InterfaceDesign
             this.btn_CaiDat = new System.Windows.Forms.Button();
             this.btn_KetXuat = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_DangXuat = new System.Windows.Forms.Button();
+            this.lb_TenPM = new System.Windows.Forms.Label();
+            this.lb_TenUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_DanhSach
@@ -41,10 +44,10 @@ namespace InterfaceDesign
             this.btn_DanhSach.BackColor = System.Drawing.SystemColors.Control;
             this.btn_DanhSach.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
             this.btn_DanhSach.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_DanhSach.Location = new System.Drawing.Point(380, 200);
+            this.btn_DanhSach.Location = new System.Drawing.Point(120, 363);
             this.btn_DanhSach.Margin = new System.Windows.Forms.Padding(5);
             this.btn_DanhSach.Name = "btn_DanhSach";
-            this.btn_DanhSach.Size = new System.Drawing.Size(210, 120);
+            this.btn_DanhSach.Size = new System.Drawing.Size(210, 66);
             this.btn_DanhSach.TabIndex = 0;
             this.btn_DanhSach.Text = "Danh sách";
             this.btn_DanhSach.UseVisualStyleBackColor = false;
@@ -55,10 +58,10 @@ namespace InterfaceDesign
             this.btn_TraCuu.BackColor = System.Drawing.SystemColors.Control;
             this.btn_TraCuu.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
             this.btn_TraCuu.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_TraCuu.Location = new System.Drawing.Point(380, 373);
+            this.btn_TraCuu.Location = new System.Drawing.Point(120, 487);
             this.btn_TraCuu.Margin = new System.Windows.Forms.Padding(5);
             this.btn_TraCuu.Name = "btn_TraCuu";
-            this.btn_TraCuu.Size = new System.Drawing.Size(210, 120);
+            this.btn_TraCuu.Size = new System.Drawing.Size(210, 66);
             this.btn_TraCuu.TabIndex = 2;
             this.btn_TraCuu.Text = "Tra cứu";
             this.btn_TraCuu.UseVisualStyleBackColor = false;
@@ -69,10 +72,10 @@ namespace InterfaceDesign
             this.btn_CaiDat.BackColor = System.Drawing.SystemColors.Control;
             this.btn_CaiDat.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
             this.btn_CaiDat.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_CaiDat.Location = new System.Drawing.Point(818, 373);
+            this.btn_CaiDat.Location = new System.Drawing.Point(440, 487);
             this.btn_CaiDat.Margin = new System.Windows.Forms.Padding(5);
             this.btn_CaiDat.Name = "btn_CaiDat";
-            this.btn_CaiDat.Size = new System.Drawing.Size(210, 120);
+            this.btn_CaiDat.Size = new System.Drawing.Size(210, 66);
             this.btn_CaiDat.TabIndex = 3;
             this.btn_CaiDat.Text = "Cài đặt";
             this.btn_CaiDat.UseVisualStyleBackColor = false;
@@ -83,10 +86,10 @@ namespace InterfaceDesign
             this.btn_KetXuat.BackColor = System.Drawing.SystemColors.Control;
             this.btn_KetXuat.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
             this.btn_KetXuat.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_KetXuat.Location = new System.Drawing.Point(818, 200);
+            this.btn_KetXuat.Location = new System.Drawing.Point(440, 365);
             this.btn_KetXuat.Margin = new System.Windows.Forms.Padding(5);
             this.btn_KetXuat.Name = "btn_KetXuat";
-            this.btn_KetXuat.Size = new System.Drawing.Size(210, 120);
+            this.btn_KetXuat.Size = new System.Drawing.Size(210, 66);
             this.btn_KetXuat.TabIndex = 4;
             this.btn_KetXuat.Text = "Kết xuất";
             this.btn_KetXuat.UseVisualStyleBackColor = false;
@@ -97,26 +100,74 @@ namespace InterfaceDesign
             this.btn_Thoat.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Thoat.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
             this.btn_Thoat.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Thoat.Location = new System.Drawing.Point(587, 598);
+            this.btn_Thoat.Location = new System.Drawing.Point(284, 612);
             this.btn_Thoat.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(212, 72);
+            this.btn_Thoat.Size = new System.Drawing.Size(212, 64);
             this.btn_Thoat.TabIndex = 5;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
+            // btn_DangXuat
+            // 
+            this.btn_DangXuat.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_DangXuat.Location = new System.Drawing.Point(1175, 15);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(144, 44);
+            this.btn_DangXuat.TabIndex = 7;
+            this.btn_DangXuat.Text = "Đăng xuất";
+            this.btn_DangXuat.UseVisualStyleBackColor = false;
+            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
+            // 
+            // lb_TenPM
+            // 
+            this.lb_TenPM.AllowDrop = true;
+            this.lb_TenPM.AutoSize = true;
+            this.lb_TenPM.BackColor = System.Drawing.Color.Transparent;
+            this.lb_TenPM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_TenPM.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TenPM.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lb_TenPM.Location = new System.Drawing.Point(228, 113);
+            this.lb_TenPM.Name = "lb_TenPM";
+            this.lb_TenPM.Size = new System.Drawing.Size(836, 95);
+            this.lb_TenPM.TabIndex = 9;
+            this.lb_TenPM.Text = "Quản Lý Phòng Mạch";
+            // 
+            // lb_TenUser
+            // 
+            this.lb_TenUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lb_TenUser.AutoSize = true;
+            this.lb_TenUser.BackColor = System.Drawing.Color.Transparent;
+            this.lb_TenUser.Enabled = false;
+            this.lb_TenUser.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lb_TenUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_TenUser.Location = new System.Drawing.Point(821, 24);
+            this.lb_TenUser.Name = "lb_TenUser";
+            this.lb_TenUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_TenUser.Size = new System.Drawing.Size(18, 27);
+            this.lb_TenUser.TabIndex = 10;
+            this.lb_TenUser.Text = " ";
+            this.lb_TenUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_TenUser.Click += new System.EventHandler(this.lb_TenUser_Click);
+            // 
             // form_manhinhchinh
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.BackgroundImage = global::InterfaceDesign.Properties.Resources.BackGround;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1338, 716);
             this.ControlBox = false;
+            this.Controls.Add(this.lb_TenUser);
+            this.Controls.Add(this.lb_TenPM);
+            this.Controls.Add(this.btn_DangXuat);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_KetXuat);
             this.Controls.Add(this.btn_CaiDat);
             this.Controls.Add(this.btn_TraCuu);
             this.Controls.Add(this.btn_DanhSach);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "form_manhinhchinh";
@@ -124,6 +175,7 @@ namespace InterfaceDesign
             this.Text = "Màn Hính Chính";
             this.Load += new System.EventHandler(this.form_manhinhchinh_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -134,5 +186,8 @@ namespace InterfaceDesign
         private System.Windows.Forms.Button btn_CaiDat;
         private System.Windows.Forms.Button btn_KetXuat;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_DangXuat;
+        private System.Windows.Forms.Label lb_TenPM;
+        private System.Windows.Forms.Label lb_TenUser;
     }
 }
